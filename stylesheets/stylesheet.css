@@ -87,8 +87,9 @@ h2 {
 }
 
 h3 {
+  color: #0055ff;
   font-size: 24px;
-  text-shadow: #aaa 0px 0px 10px
+  text-shadow: #9999bb 0px 0px 10px
 }
 
 h4 {
