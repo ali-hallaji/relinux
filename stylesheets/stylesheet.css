@@ -94,17 +94,14 @@ h3 {
 
 h4 {
   font-size: 21px;
-  /*text-shadow: #bbb 0px 0px 10px*/
 }
 
 h5 {
   font-size: 18px;
-  text-shadow: #bbb 0px 0px 10px
 }
 
 h6 {
   font-size: 16px;
-  text-shadow: #bbb 0px 0px 10px
 }
 
 p {
@@ -295,8 +292,20 @@ Full-Width Styles
   background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
   font-weight: 700;
   box-shadow: 0 0 20px rgba(0,0,0,.5);
-  border-bottom-left-radius: 9px;
-  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-shadow: none;
+
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+#forkme_banner:hover {
+	text-shadow: #fff 0px 0px 10px;
+	box-shadow: 0 0 20px #000;
 }
 
 #header_wrap {
@@ -317,7 +326,7 @@ Full-Width Styles
   color: #fff;
   font-size: 42px;
   font-weight: 700;
-  text-shadow: #111 5px 5px 10px;
+  text-shadow: #111 0px 0px 10px;
 }
 
 #project_title a {
@@ -401,7 +410,7 @@ Full-Width Styles
 
 #footer_wrap {
   background: #212121;
-  text-shadow: #111 0 0 10px;
+  text-shadow: #111 2px 2px 10px;
 }
 
 
