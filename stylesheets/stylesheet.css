@@ -1,6 +1,7 @@
 /*******************************************************************************
 Slate Theme for Github Pages
 by Jason Costello, @jsncostello
+Modified by Joel Leclerc (MiJyn), @lkjoel
 *******************************************************************************/
 
 @import url(pygment_trac.css);
@@ -344,6 +345,10 @@ Full-Width Styles
   font-size: 42px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
+  background: transparent url("../images/relinux.png") no-repeat 100%;
+  display: block;
+  width: 205px;
+  height: 55px;
 }
 
 #project_title a:hover {
