@@ -12,6 +12,9 @@
 <link rel="stylesheet" type="text/css" media="screen"
 	href="stylesheets/stylesheet.css">
 
+<script type="text/javascript" src="javascripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="javascripts/slides.min.jquery.js"></script>
+
 <title>Relinux</title>
 
 <script type="text/javascript">
@@ -31,6 +34,40 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+<!-- <script type="text/javascript">
+	function updateNextPrev() {
+		$(".slideshow .prev").css({
+			padding: 2
+		})
+		$(".slideshow .next").css({
+			padding: 2
+		})
+		$(".slideshow .prev").css({
+			position : "absolute",
+			left : $(".slider").offset().left,
+			top : (($(".slider").offset().top + $(".slider").outerHeight()) / 2) + ($(".slideshow .prev").outerHeight() / 2),
+			padding: 2,
+			"background-color" : "rgba(30, 30, 30, .5)"
+		});
+		$(".slideshow .next").css({
+			position : "absolute",
+			padding: 2,
+			left : $(".slider").outerWidth() + $(".slider").offset().left,
+			top : $(".slider").offset().top,
+			"background-color" : "rgba(30, 30, 30, .5)"
+		});
+	}
+	$(document).ready(function() {
+		$(".slideshow").slides({
+			container : "slider",
+			generateNextPrev : false,
+			//play : 2500,
+			effect : 'fade',
+			slidesLoaded : updateNextPrev,
+			animationComplete: updateNextPrev
+		});
+	});
+</script> -->
 </head>
 
 <body>
@@ -42,7 +79,8 @@
 				on GitHub</a>
 
 			<h1 id="project_title">
-				<a href="/"><!--Relinux--></a>
+				<a href="/"> <!--Relinux-->
+				</a>
 			</h1>
 			<!-- <h2 id="project_tagline">A free tool to create a
 				professional-looking OS</h2>-->
@@ -56,7 +94,39 @@
 
 	<!-- MAIN CONTENT -->
 	<div id="main_content_wrap" class="outer">
+		<div class="hero_header_wrap_top"></div>
+		<div class="hero_header">
+			<h1 style="font-size: 250%">Free linux distro creating toolkit</h1>
+			<!-- <div id="hero_slideshow" class="slideshow">
+				<div class="slider inner">
+					<div>
+						<img src="images/20mins.png" />Test
+					</div>
+					<div>
+						<img src="images/20mins.png" />
+					</div>
+				</div>
+				<a href="#" class="prev">&lt;</a> <a href="#" class="next">&gt;</a>
+			</div>-->
+			<img src="images/relinux_configure.png" />
+		</div>
+		<!-- <div class="hero_header_wrap_bottom"></div> -->
 		<section id="main_content" class="inner">
+			<div class="features">
+				<hr />
+				<div>
+					<h1>Fast</h1>
+					Relinux is completely multithreaded to let operations run at the
+					same time, therefore decreasing the amount of time needed.
+				</div>
+				<hr />
+				<div>
+					<h1>Easy</h1>
+					Apart from the easiness in its power, it is also a kit that
+					contains tools to help you customize your system.
+				</div>
+				<hr />
+			</div>
 			<h3 id='about'>About</h3>
 
 <p>Relinux is a free remastering tool for linux. It was originally written as a fork of remastersys, but now it is completely rewritten in Python. The goal of this project is to let everyone from normal users to kernel hackers make their own OS easily.</p>
@@ -126,8 +196,6 @@
 			</p>
 		</footer>
 	</div>
-
-
 
 </body>
 </html>
