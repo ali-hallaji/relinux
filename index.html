@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<meta charset='utf-8' />
+<meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 <meta name="description"
 	content="Relinux : A free tool to create a professional-looking OS" />
@@ -10,10 +9,18 @@
 	content="8oEMy7c-MfynNvTNB627ezoqqMxzOqWMHKO5UM1GarM" />
 
 <link rel="stylesheet" type="text/css" media="screen"
+	href="stylesheets/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen"
 	href="stylesheets/stylesheet.css">
 
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
 <script type="text/javascript" src="javascripts/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="javascripts/slides.min.jquery.js"></script>
+<script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="javascripts/main.js"></script>
 
 <title>Relinux</title>
 
@@ -23,7 +30,8 @@
 	_gaq.push([ '_setDomainName', 'relinuxkit.org' ]);
 	_gaq.push([ '_trackPageview' ]);
 
-	(function() {
+	(function()
+	{
 		var ga = document.createElement('script');
 		ga.type = 'text/javascript';
 		ga.async = true;
@@ -34,168 +42,151 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
-<!-- <script type="text/javascript">
-	function updateNextPrev() {
-		$(".slideshow .prev").css({
-			padding: 2
-		})
-		$(".slideshow .next").css({
-			padding: 2
-		})
-		$(".slideshow .prev").css({
-			position : "absolute",
-			left : $(".slider").offset().left,
-			top : (($(".slider").offset().top + $(".slider").outerHeight()) / 2) + ($(".slideshow .prev").outerHeight() / 2),
-			padding: 2,
-			"background-color" : "rgba(30, 30, 30, .5)"
-		});
-		$(".slideshow .next").css({
-			position : "absolute",
-			padding: 2,
-			left : $(".slider").outerWidth() + $(".slider").offset().left,
-			top : $(".slider").offset().top,
-			"background-color" : "rgba(30, 30, 30, .5)"
-		});
-	}
-	$(document).ready(function() {
-		$(".slideshow").slides({
-			container : "slider",
-			generateNextPrev : false,
-			//play : 2500,
-			effect : 'fade',
-			slidesLoaded : updateNextPrev,
-			animationComplete: updateNextPrev
-		});
-	});
-</script> -->
 </head>
-
-<body>
-
-	<!-- HEADER -->
-	<div id="header_wrap" class="outer">
-		<header class="inner">
-			<a id="forkme_banner" href="https://github.com/MiJyn/relinux">View
-				on GitHub</a>
-
-			<h1 id="project_title">
-				<a href="/"> <!--Relinux-->
-				</a>
-			</h1>
-			<!-- <h2 id="project_tagline">A free tool to create a
-				professional-looking OS</h2>-->
-
-			<!--<section id="downloads">
-              <a class="zip_download_link" href="https://github.com/MiJyn/relinux/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/MiJyn/relinux/tarball/master">Download this project as a tar.gz file</a>
-            </section>-->
-		</header>
-	</div>
-
-	<!-- MAIN CONTENT -->
-	<div id="main_content_wrap" class="outer">
-		<div class="hero_header_wrap_top"></div>
-		<div class="hero_header">
-			<h1 style="font-size: 250%">Free linux distro creating toolkit</h1>
-			<!-- <div id="hero_slideshow" class="slideshow">
-				<div class="slider inner">
-					<div>
-						<img src="images/20mins.png" />Test
-					</div>
-					<div>
-						<img src="images/20mins.png" />
+<body data-spy="scroll">
+	<header>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#"><img src="images/relinux-light.png"
+						alt="Relinux" /></a>
+					<div class="nav-collapse">
+						<ul id="nav-menu" class="nav">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#features">Features</a></li>
+							<li><a href="#download">Download</a></li>
+						</ul>
 					</div>
 				</div>
-				<a href="#" class="prev">&lt;</a> <a href="#" class="next">&gt;</a>
-			</div>-->
-			<img src="images/relinux_configure.png" />
-		</div>
-		<!-- <div class="hero_header_wrap_bottom"></div> -->
-		<section id="main_content" class="inner">
-			<div class="features">
-				<hr />
-				<div>
-					<h1>Fast</h1>
-					Relinux is completely multithreaded to let operations run at the
-					same time, therefore decreasing the amount of time needed.
-				</div>
-				<hr />
-				<div>
-					<h1>Easy</h1>
-					Apart from the easiness in its power, it is also a kit that
-					contains tools to help you customize your system.
-				</div>
-				<hr />
 			</div>
-			<h3 id='about'>About</h3>
+			<!-- <div class="navbar-shadow"></div>-->
+		</div>
+		<!-- <div class="navbar-highlight-wrapper">
+			<div class="navbar-highlight" id="navbar-highlight-selected"></div>
+			<div class="navbar-highlight" id="navbar-highlight-hover"></div>
+		</div>-->
+	</header>
+	<div id="main_content" class="container">
+		<div class="hero-unit" id="home">
+			<!-- <h1>Free Linux distro creation tool</h1>
+			<p>A fast, powerful, flexible, yet easy Linux distro creation tool.</p>
+			<p>
+				<a class="btn btn-large" href="#features">See the features &raquo;</a>
+			</p>-->
+			<div id="hero-slideshow" class="carousel slide">
+				<div class="carousel-inner">
+					<div class="active item center">
+						<h1>Test</h1>
+					</div>
+					<div class="item center">
+						<h1>Test1</h1>
+					</div>
+					<div class="item center">
+						<h1>Test2</h1>
+					</div>
+				</div>
+				<a class="carousel-control left" href="#hero-slideshow" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#hero-slideshow" data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+		<hr />
+		<!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+		<div class="row" id="features">
+			<div class="span12">
+				<h1>Features</h1>
+				<br />
+			</div>
+			<div class="span4" id="feature_fast">
+				<h2>Fast</h2>
+				<p>
+					Speed has always been an issue in many applications, but sometimes slowness
+					can be avoided by using every resource available to the program. By running
+					different operations on each <abbr title="Central Processing Unit">CPU</abbr>
+					core, relinux cuts down the time needed to generate your linux
+					distribution.
+				</p>
+				<p class="hideme hidden"></p>
+				<p>
+					<a class="btn showhide" href="#" onclick="showhide('#feature_fast')">Show
+						more &raquo;</a>
+				</p>
+			</div>
+			<div class="span4" id="feature_easy">
+				<h2>Easy</h2>
+				<p>Relinux gives a helping hand to every part of creating your distro.
+					From configuring applications to giving tips on making your distro look
+					more professional to editing the installer, relinux will help you.</p>
+				<p class="hideme hidden">Test2</p>
+				<p>
+					<a class="btn showhide" href="#" onclick="showhide('#feature_easy')">Show
+						more &raquo;</a>
+				</p>
+			</div>
+			<div class="span4" id="feature_flexible">
+				<h2>Flexible</h2>
+				<p>As relinux is completely modular, you can not only create the base
+					image, but also automate the tasks that you commonly do when creating a new
+					version of your distro.</p>
+				<p class="hideme hidden">Test3</p>
+				<p>
+					<a class="btn showhide" href="#" onclick="showhide('#feature_flexible')">Show
+						more &raquo;</a>
+				</p>
+			</div>
+		</div>
+		<hr />
+		<div class="row" id="download">
+			<div class="span12">
+				<h1>Download</h1>
+				<br />
+			</div>
+			<div class="span12">
+				<p>
+					Relinux 0.4 is not available yet, but you can get the source at <a
+						href="https://github.com/MiJyn/relinux"
+						title="https://github.com/MiJyn/relinux" target="_blank">https://github.com/MiJyn/relinux</a>
+				</p>
+			</div>
+		</div>
+		<hr />
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_shortname = 'relinux';
+			var disqus_url = "http://www.relinuxkit.org/";
+			var disqus_developer = 1;
 
-<p>Relinux is a free remastering tool for linux. It was originally written as a fork of remastersys, but now it is completely rewritten in Python. The goal of this project is to let everyone from normal users to kernel hackers make their own OS easily.</p>
-
-<h3 id='features'>Features</h3>
-
-<h4 id='fast'>Fast</h4>
-
-<p>Relinux is completely multithreaded to let operations run at the same time, therefore decreasing the amount of time needed.</p>
-
-<h4 id='powerful'>Powerful</h4>
-
-<p>Relinux is powerful because of its simplicity. In essence, it simply copies your system, and puts it on an ISO.</p>
-
-<h4 id='easy'>Easy</h4>
-
-<p>Apart from the easiness in its power, it is also a kit that contains tools to help you customize your system.</p>
-
-<h3 id='download'>Download</h3>
-
-<p>There are currently no downloads for relinux 0.4. Downloads for relinux 0.3 are located at <a href='https://launchpad.net/relinux'>launchpad</a></p>
-
-<h3 id='how_to_use'>How to use</h3>
-
-<ol>
-<li>Choose and install your base system</li>
-
-<li>Customize it</li>
-
-<li>Run relinux</li>
-</ol>
-
-<h3 id='helping_out'>Helping out</h3>
-			<hr />
-			<div id="disqus_thread"></div>
-			<script type="text/javascript">
-				var disqus_shortname = 'relinux';
-				//var disqus_url = "http://mijyn.github.com/relinux";
-				//var disqus_developer = 1;
-
-				(function() {
-					var dsq = document.createElement('script');
-					dsq.type = 'text/javascript';
-					dsq.async = true;
-					dsq.src = 'http://' + disqus_shortname
-							+ '.disqus.com/embed.js';
-					(document.getElementsByTagName('head')[0] || document
-							.getElementsByTagName('body')[0]).appendChild(dsq);
-				})();
-			</script>
-			<noscript>
-				Please enable JavaScript to view the <a
-					href="http://disqus.com/?ref_noscript">comments powered by
-					Disqus.</a>
-			</noscript>
-			<a href="http://disqus.com" class="dsq-brlink">comments powered
-				by <span class="logo-disqus">Disqus</span>
-			</a>
-		</section>
+			(function()
+			{
+				var dsq = document.createElement('script');
+				dsq.type = 'text/javascript';
+				dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document
+						.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>
+			Please enable JavaScript to view the <a
+				href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+		</noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+			class="logo-disqus">Disqus</span>
+		</a>
 	</div>
-
-	<!-- FOOTER  -->
-	<div id="footer_wrap" class="outer">
-		<footer class="inner">
-			<p class="copyright">
-				Relinux written and maintained by <a href="https://github.com/MiJyn">MiJyn</a>
-			</p>
+	<div id="footer_wrap">
+		<hr />
+		<footer>
+			Relinux is written and maintained by <a href="https://github.com/MiJyn">MiJyn</a>
 		</footer>
 	</div>
-
 </body>
 </html>
