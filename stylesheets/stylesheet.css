@@ -178,6 +178,7 @@ hr {
 /* === UTILITIES === */
 .center {
 	text-align: center;
+	display: block;
 }
 
 /* === FOOTER === */
