@@ -4,7 +4,8 @@
 
 /* === BODY === */
 
-body { /*padding-top: 40px;*/
+body {
+	margin-top: 10px;
 	/*padding-bottom: 40px;*/
 	/*background-color: #383635;
 	color: #fff;*/
@@ -40,13 +41,13 @@ body { /*padding-top: 40px;*/
 }
 
 .navbar-inner .brand {
-	padding-top: 10px;
-	padding-bottom: 20px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 	color: #fff;
 }
 
 .navbar-inner ul {
-	padding-top: 25px;
+	padding-top: 15px;
 	color: #fff;
 }
 
