@@ -5,10 +5,14 @@
 /* === BODY === */
 
 body {
-	margin-top: 10px;
+	/*margin-top: 10px;*/
 	/*padding-bottom: 40px;*/
 	/*background-color: #383635;
 	color: #fff;*/
+}
+
+header {
+	margin-top: 10px;
 }
 
 /* === SELECTION === */
@@ -166,15 +170,21 @@ body {
 	border-color: #f00;
 }
 
-/* === HR === */ /*
-hr {
-	border-width: 0px;
-	border-color: #000;
-	color: #000;
-	background-color: #000;
-	height: 1px;
+/* === HEADERS === */
+h3.posttitle {
+	margin-bottom: 0px;
 }
-*/
+
+a.posttitle {
+	margin-bottom: 0px;
+}
+
+/* === HR === */
+hr.small {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
 
 /* === UTILITIES === */
 .center {

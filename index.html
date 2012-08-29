@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="home">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -9,18 +9,18 @@
 	content="8oEMy7c-MfynNvTNB627ezoqqMxzOqWMHKO5UM1GarM" />
 
 <link rel="stylesheet" type="text/css" media="screen"
-	href="stylesheets/bootstrap.min.css">
+	href="/stylesheets/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" media="screen"
-	href="stylesheets/stylesheet.css">
+	href="/stylesheets/stylesheet.css">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script type="text/javascript" src="javascripts/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="javascripts/main.js"></script>
+<script type="text/javascript" src="/javascripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/main.js"></script>
 
 <title>Relinux</title>
 
@@ -48,13 +48,14 @@
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="container">
-					<a class="brand" href="#"><img src="images/relinux-light.png"
+					<a class="brand" href="#"><img src="/images/relinux-light.png"
 						alt="Relinux" height="54" /></a>
 					<div class="nav-collapse">
 						<ul id="nav-menu" class="nav">
-							<li><a href="#home">Home</a></li>
+							<li class="active"><a href="#home">Home</a></li>
 							<li><a href="#features">Features</a></li>
 							<li><a href="#download">Download</a></li>
+							<li><a href="/blog/#">Blog</a></li>
 						</ul>
 					</div>
 				</div>
@@ -67,42 +68,42 @@
 		</div>-->
 	</header>
 	<div id="main_content" class="container">
-		<div class="hero-unit" id="home">
-			<!-- <h1>Free Linux distro creation tool</h1>
+		<div class="hero-unit">
+	<!-- <h1>Free Linux distro creation tool</h1>
 			<p>A fast, powerful, flexible, yet easy Linux distro creation tool.</p>
 			<p>
 				<a class="btn btn-large" href="#features">See the features &raquo;</a>
 			</p>-->
-			<div id="hero-slideshow" class="carousel slide">
-				<div class="carousel-inner">
-					<div class="active item center">
-						<h1>Relinux</h1>
-						<h2>A free and open-source linux distro creation toolkit.</h2>
-					</div>
-					<div class="item">
-						<center>
-							<img src="images/relinux_main.png" class="center" align="center" />
-						</center>
-					</div>
-					<div class="item">
-						<center>
-							<img src="images/relinux_configure_general.png" class="center"
-								align="center" />
-						</center>
-					</div>
-					<div class="item">
-						<center>
-							<img src="images/relinux_configure_advanced.png" class="center"
-								align="center" />
-						</center>
-					</div>
-				</div>
-				<a class="carousel-control left" href="#hero-slideshow" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#hero-slideshow" data-slide="next">&rsaquo;</a>
+	<div id="hero-slideshow" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="active item center">
+				<h1>Relinux</h1>
+				<h2>A free and open-source linux distro creation toolkit.</h2>
+			</div>
+			<div class="item">
+				<center>
+					<img src="images/relinux_main.png" class="center" align="center" />
+				</center>
+			</div>
+			<div class="item">
+				<center>
+					<img src="images/relinux_configure_general.png" class="center"
+						align="center" />
+				</center>
+			</div>
+			<div class="item">
+				<center>
+					<img src="images/relinux_configure_advanced.png" class="center"
+						align="center" />
+				</center>
 			</div>
 		</div>
-		<hr />
-		<!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<a class="carousel-control left" href="#hero-slideshow" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control right" href="#hero-slideshow" data-slide="next">&rsaquo;</a>
+	</div>
+</div>
+<hr />
+<!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -112,68 +113,68 @@
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-		<div class="row" id="features">
-			<div class="span12">
-				<h1>Features</h1>
-				<br />
-			</div>
-			<div class="span4" id="feature_fast">
-				<h2>Fast</h2>
-				<p>
-					Speed has always been an issue in many applications, but sometimes slowness
-					can be avoided by using every resource available to the program. By running
-					different operations on each <abbr title="Central Processing Unit">CPU</abbr>
-					core, relinux cuts down the time needed to generate your linux
-					distribution.
-				</p>
-				<p class="hideme hidden"></p>
-				<p>
-					<a class="btn showhide" onclick="showhide('#feature_fast')">Show more
-						&raquo;</a>
-				</p>
-			</div>
-			<div class="span4" id="feature_easy">
-				<h2>Easy</h2>
-				<p>Relinux gives a helping hand to every part of creating your distro.
-					From configuring applications to giving tips on making your distro look
-					more professional to editing the installer, relinux will help you.</p>
-				<p class="hideme hidden"></p>
-				<p>
-					<a class="btn showhide" onclick="showhide('#feature_easy')">Show more
-						&raquo;</a>
-				</p>
-			</div>
-			<div class="span4" id="feature_flexible">
-				<h2>Flexible</h2>
-				<p>As relinux is completely modular, you can not only create the base
-					image, but also automate the tasks that you commonly do when creating a new
-					version of your distro.</p>
-				<p class="hideme hidden"></p>
-				<p>
-					<a class="btn showhide" onclick="showhide('#feature_flexible')">Show
-						more &raquo;</a>
-				</p>
-			</div>
-		</div>
-		<hr />
-		<div class="row" id="download">
-			<div class="span12">
-				<h1>Download</h1>
-				<br />
-			</div>
-			<div class="span12">
-				<p>
-					Relinux 0.4 is not available yet, but you can get the source at <a
-						href="https://github.com/MiJyn/relinux"
-						title="https://github.com/MiJyn/relinux" target="_blank">https://github.com/MiJyn/relinux</a>
-				</p>
-			</div>
-		</div>
+<div class="row" id="features">
+	<div class="span12">
+		<h1>Features</h1>
+		<br />
+	</div>
+	<div class="span4" id="feature_fast">
+		<h2>Fast</h2>
+		<p>
+			Speed has always been an issue in many applications, but sometimes slowness
+			can be avoided by using every resource available to the program. By running
+			different operations on each <abbr title="Central Processing Unit">CPU</abbr>
+			core, relinux cuts down the time needed to generate your linux distribution.
+		</p>
+		<p class="hideme hidden"></p>
+		<p>
+			<a class="btn showhide" onclick="showhide('#feature_fast')">Show more
+				&raquo;</a>
+		</p>
+	</div>
+	<div class="span4" id="feature_easy">
+		<h2>Easy</h2>
+		<p>Relinux gives a helping hand to every part of creating your distro.
+			From configuring applications to giving tips on making your distro look more
+			professional to editing the installer, relinux will help you.</p>
+		<p class="hideme hidden"></p>
+		<p>
+			<a class="btn showhide" onclick="showhide('#feature_easy')">Show more
+				&raquo;</a>
+		</p>
+	</div>
+	<div class="span4" id="feature_flexible">
+		<h2>Flexible</h2>
+		<p>As relinux is completely modular, you can not only create the base
+			image, but also automate the tasks that you commonly do when creating a new
+			version of your distro.</p>
+		<p class="hideme hidden"></p>
+		<p>
+			<a class="btn showhide" onclick="showhide('#feature_flexible')">Show more
+				&raquo;</a>
+		</p>
+	</div>
+</div>
+<hr />
+<div class="row" id="download">
+	<div class="span12">
+		<h1>Download</h1>
+		<br />
+	</div>
+	<div class="span12">
+		<p>
+			Relinux 0.4 is not available yet, but you can get the source at <a
+				href="https://github.com/MiJyn/relinux"
+				title="https://github.com/MiJyn/relinux" target="_blank">https://github.com/MiJyn/relinux</a>
+		</p>
+	</div>
+</div>
+
 		<hr />
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
 			var disqus_shortname = 'relinux';
-			var disqus_url = "http://www.relinuxkit.org/";
+			var disqus_url = "http://www.relinuxkit.org//index.html";
 			var disqus_developer = 1;
 
 			(function()
