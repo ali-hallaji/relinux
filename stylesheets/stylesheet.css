@@ -47,6 +47,7 @@ header {
 .navbar-inner .brand {
 	padding-top: 5px;
 	padding-bottom: 10px;
+	margin-right: 50px;
 	color: #fff;
 }
 
@@ -130,6 +131,11 @@ header {
 	border-style: solid;
 	border-color: #000;*/
 	border-radius: 15px;
+}
+
+.carousel-control {
+	border: 2px solid black;
+	border-opacity: .1;
 }
 
 /* === FEATURES === */
