@@ -198,6 +198,11 @@ hr.small {
 	display: block;
 }
 
+.loading {
+	background: url('/images/ajax-loader.gif') no-repeat;
+    height: 60px;
+}
+
 /* === FOOTER === */
 #footer_wrap hr {
 	margin-bottom: 0;
