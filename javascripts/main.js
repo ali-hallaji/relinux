@@ -5,10 +5,11 @@ twitterusername = "relinux";
 function twitterCallback2(twitters)
 {
 	var statusHTML = [];
-	for ( var i = 0; i < twitters.length; i++)
+	console.log("WORKING")
+	for ( var i = 0; i < twitters.results.length; i++)
 	{
-		var username = twitters[i].user.screen_name;
-		var status = twitters[i].text
+		var username = twitters.results[i].from_user;
+		var status = twitters.results[i].text
 				.replace(
 						/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g,
 						function(url)
@@ -24,19 +25,21 @@ function twitterCallback2(twitters)
 									+ reply.substring(1) + '</a>';
 						});
 		statusHTML.push('<p>&ldquo;' + status + '&rdquo; &ndash; <small>'
-				+ relative_time(twitters[i].created_at) + '</small></p>');
+				+ relative_time(twitters.results[i].created_at) + '</small></p>');
 	}
-	$('.loading').fadeOut(750, function()
-	{
+	//$(".loading").hide()
+	console.log(statusHTML)
+	//$(latesttweetid).append(statusHTML.join(''));
+	$(".loading").fadeOut(750, function() {
 		$(latesttweetid).append($(statusHTML.join('')).hide().fadeIn(750));
-	});
+	})
 }
 
 function relative_time(time_value)
 {
 	var values = time_value.split(" ");
-	time_value = values[1] + " " + values[2] + ", " + values[5] + " "
-			+ values[3];
+	//time_value = values[1] + " " + values[2] + ", " + values[5] + " "
+	//		+ values[3];
 	var parsed_date = Date.parse(time_value);
 	var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
 	var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
@@ -93,8 +96,8 @@ function start()
 		console.log("GOOD");
 	});
 	$("ul.nav li").trigger("activate");
-	$.getScript('http://twitter.com/statuses/user_timeline/' + twitterusername
-			+ '.json?callback=twitterCallback2&count=1');
+	$.getScript('http://search.twitter.com/search.json?q=from:' + twitterusername
+			+ '&callback=twitterCallback2&rpp=5');
 }
 
 $(document).ready(start);
