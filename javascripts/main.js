@@ -13,7 +13,7 @@ function twitterCallback2(twitters)
 						/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g,
 						function(url)
 						{
-							url_1 = unshorten(url)
+							url_1 = unshorten(url);
 							return '<a href="' + url + '">' + url_1 + '</a>';
 						}).replace(
 						/\B@([_a-z0-9]+)/ig,
