@@ -5,10 +5,11 @@ twitterusername = "relinux";
 function twitterCallback2(twitters)
 {
 	var statusHTML = [];
-	for ( var i = 0; i < twitters.results.length; i++)
+	console.log("kk");
+	for ( var i = 0; i < twitters.length; i++)
 	{
-		var username = twitters.results[i].from_user;
-		var status = twitters.results[i].text
+		var username = twitters[i].user.screen_name;
+		var status = twitters[i].text
 				.replace(
 						/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g,
 						function(url)
@@ -25,11 +26,11 @@ function twitterCallback2(twitters)
 									+ reply.substring(1) + '</a>';
 						});
 		statusHTML.push('<p>&ldquo;' + status + '&rdquo; &ndash; <small>'
-				+ relative_time(twitters.results[i].created_at)
+				+ relative_time(twitters[i].created_at)
 				+ '</small></p>');
 	}
 	// $(".loading").hide()
-	// console.log(statusHTML)
+	console.log(statusHTML)
 	// $(latesttweetid).append(statusHTML.join(''));
 	$(".loading").fadeOut(750, function()
 	{
@@ -98,8 +99,8 @@ function start()
 		console.log("GOOD");
 	});
 	$("ul.nav li").trigger("activate");
-	$.getScript('http://search.twitter.com/search.json?q=from:'
-			+ twitterusername + '&callback=twitterCallback2&rpp=5');
+	$.getScript('http://api.twitter.com/1/statuses/user_timeline/'
+			+ twitterusername + ".json?count=5&callback=twitterCallback2");
 }
 
 $(document).ready(start);
