@@ -5,7 +5,6 @@ twitterusername = "relinux";
 function twitterCallback2(twitters)
 {
 	var statusHTML = [];
-	console.log("kk");
 	for ( var i = 0; i < twitters.length; i++)
 	{
 		var username = twitters[i].user.screen_name;
@@ -26,11 +25,9 @@ function twitterCallback2(twitters)
 									+ reply.substring(1) + '</a>';
 						});
 		statusHTML.push('<p>&ldquo;' + status + '&rdquo; &ndash; <small>'
-				+ relative_time(twitters[i].created_at)
-				+ '</small></p>');
+				+ relative_time(twitters[i].created_at) + '</small></p>');
 	}
 	// $(".loading").hide()
-	console.log(statusHTML)
 	// $(latesttweetid).append(statusHTML.join(''));
 	$(".loading").fadeOut(750, function()
 	{
@@ -100,7 +97,8 @@ function start()
 	});
 	$("ul.nav li").trigger("activate");
 	$.getScript('http://api.twitter.com/1/statuses/user_timeline/'
-			+ twitterusername + ".json?count=5&callback=twitterCallback2");
+			+ twitterusername + ".json?count=5&callback=twitterCallback2&randommath="
+			+ new Date().getTime());
 }
 
 $(document).ready(start);
