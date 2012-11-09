@@ -103,7 +103,7 @@ function start()
 
 $(document).ready(start);
 
-function showhide(el)
+function showhidef(el, s, e)
 {
 	hidden = true;
 	if (!($(el + " .hideme").hasClass("hidden")))
@@ -113,9 +113,14 @@ function showhide(el)
 	$(el + " .hideme").toggleClass("hidden");
 	if (hidden)
 	{
-		$(el + " .showhide").html("&laquo; Show less");
+		$(el + " .showhide").html(e);
 	} else
 	{
-		$(el + " .showhide").html("Show more &raquo;")
+		$(el + " .showhide").html(s)
 	}
+}
+
+function showhide(el)
+{
+	showhidef(el, "Show more &raquo;", "&laquo; Show less");
 }

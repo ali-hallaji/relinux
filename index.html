@@ -113,8 +113,9 @@
 				</center>
 			</div>
 		</div>
-		<a class="carousel-control left" href="#hero-slideshow" data-slide="prev">&lsaquo;</a>
-		<a class="carousel-control right" href="#hero-slideshow" data-slide="next">&rsaquo;</a>
+		<a class="carousel-control left" href="#hero-slideshow"
+			data-slide="prev">&lsaquo;</a> <a class="carousel-control right"
+			href="#hero-slideshow" data-slide="next">&rsaquo;</a>
 	</div>
 </div>
 <hr />
@@ -136,37 +137,39 @@
 	<div class="span4" id="feature_fast">
 		<h2>Fast</h2>
 		<p>
-			Speed has always been an issue in many applications, but sometimes slowness
-			can be avoided by using every resource available to the program. By running
-			different operations on each <abbr title="Central Processing Unit">CPU</abbr>
-			core, relinux cuts down the time needed to generate your Linux distribution.
+			Speed has always been an issue in many applications, but sometimes
+			slowness can be avoided by using every resource available to the
+			program. By running different operations on each <abbr
+				title="Central Processing Unit">CPU</abbr> core, relinux cuts down
+			the time needed to generate your Linux distribution.
 		</p>
 		<p class="hideme hidden"></p>
 		<p>
-			<a class="btn showhide" onclick="showhide('#feature_fast')">Show more
-				&raquo;</a>
+			<a class="btn showhide" onclick="showhide('#feature_fast')">Show
+				more &raquo;</a>
 		</p>
 	</div>
 	<div class="span4" id="feature_easy">
 		<h2>Easy</h2>
-		<p>Relinux gives a helping hand to every part of creating your distro.
-			From configuring applications to giving tips on making your distro look more
-			professional to editing the installer, relinux will help you.</p>
+		<p>Relinux gives a helping hand to every part of creating your
+			distro. From configuring applications to giving tips on making your
+			distro look more professional to editing the installer, relinux will
+			help you.</p>
 		<p class="hideme hidden"></p>
 		<p>
-			<a class="btn showhide" onclick="showhide('#feature_easy')">Show more
-				&raquo;</a>
+			<a class="btn showhide" onclick="showhide('#feature_easy')">Show
+				more &raquo;</a>
 		</p>
 	</div>
 	<div class="span4" id="feature_flexible">
 		<h2>Flexible</h2>
-		<p>As relinux is completely modular, you can not only create the base
-			image, but also automate the tasks that you commonly do when creating a new
-			version of your distro.</p>
+		<p>As relinux is completely modular, you can not only create the
+			base image, but also automate the tasks that you commonly do when
+			creating a new version of your distro.</p>
 		<p class="hideme hidden"></p>
 		<p>
-			<a class="btn showhide" onclick="showhide('#feature_flexible')">Show more
-				&raquo;</a>
+			<a class="btn showhide" onclick="showhide('#feature_flexible')">Show
+				more &raquo;</a>
 		</p>
 	</div>
 </div>
@@ -177,10 +180,35 @@
 		<br />
 	</div>
 	<div class="span12">
-		<p>
-			Relinux 0.4 is not available yet, but you can get the source at <a href="https://github.com/MiJyn/relinux" title="https://github.com/MiJyn/relinux" target="_blank">https://github.com/MiJyn/relinux</a>.<br />
-			Downloads for relinux 0.3 are located at <a href="https://launchpad.net/relinux" title="https://launchpad.net/relinux">https://launchpad.net/relinux</a>.
-		</p>
+		<div id="download_ppa">
+			<h3>PPA:</h3>
+			Add <code>ppa:relinux-dev/testing</code> to your software sources.
+			<br />
+			<div class="hideme hidden">
+				<div class="howto">
+				<h5>GUI method:</h5>
+				Open the Software Sources menu by launching the Ubuntu Software Center and
+				selecting Edit->Software Sources. Choose the Other Software tab and click Add.
+				<br />
+				<img src="/images/relinux_ppa_add.png" />
+				<br />
+				Enter <code>ppa:relinux-dev/testing</code>.<br />
+				<h5>Alternative terminal method:</h5>
+<pre><code>sudo add-apt-repository ppa:relinux-dev/testing
+sudo apt-get update</code></pre>
+				</div>
+			</div>
+			<a class="showhide" onclick="showhidef('#download_ppa','Show how &raquo;','&laquo; Hide how')" href="javascript:void(0);">Show more &raquo;</a>
+			<br />
+			Once you have added the PPA, <a href="apt://relinux" title="relinux">click this link to install relinux</a>.
+		</div>
+		<h3>Other:</h3>
+		Other downloads are available at <a href="https://github.com/MiJyn/relinux/downloads"
+		title="https://github.com/MiJyn/relinux/downloads">
+		https://github.com/MiJyn/relinux/downloads</a>.<br />
+		Older releases of relinux are available at <a
+				href="https://launchpad.net/relinux"
+				title="https://launchpad.net/relinux">https://launchpad.net/relinux</a>.
 	</div>
 </div>
 
