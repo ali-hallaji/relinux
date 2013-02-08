@@ -1,6 +1,12 @@
 latesttweetid = "#latest-tweet";
 twitterusername = "relinux";
 
+try {
+	unshorten();
+} catch (e) {
+	function unshorten(l) {return l;};
+}
+
 // === CODE COPIED FROM TWITTER ===
 function twitterCallback2(twitters)
 {
